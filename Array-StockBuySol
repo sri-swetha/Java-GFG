@@ -1,0 +1,16 @@
+int stockBuySell(int price[], int N){
+    int min=price[0],profit=0,temp;
+    temp=min;
+    for(int i=0;i<N;i++){
+        if(price[i]>temp){
+            temp=price[i];
+            if(i!=N-1)
+            continue;
+        }
+        profit+= temp-min;
+        min=price[i];
+        temp=min;
+    }
+    return profit;
+    //Code here
+}
